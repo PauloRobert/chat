@@ -811,38 +811,39 @@ body, html {
     max-width: 280px;
 }
 
-/* Onboarding Styles */
 .onboarding-container {
     position: absolute;
     top: 0;
     left: 0;
-    width: 390px;
-    height: 750px;
+    width: 100%;
+    height: 100%;
     background: white;
-    z-index: 2005;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: opacity .5s ease, transform .5s ease;
+    z-index: 2005;
 }
 
 .onboarding-slides {
     flex: 1;
     display: flex;
-    transition: transform 0.4s ease;
     width: 300%;
+    transition: transform .4s ease;
 }
 
 .onboarding-slide {
-    flex: 0 0 33.333%;
+    flex: 0 0 33.3333%;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center; /* centraliza vertical */
     align-items: center;
-    justify-content: center;
-    padding: 2rem 1.5rem;
     text-align: center;
+    padding: 2rem;
+    box-sizing: border-box;
 }
 
 .slide-1 {
@@ -884,12 +885,14 @@ body, html {
 }
 
 .onboarding-nav {
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 1rem 1.5rem;
+    padding: 0 1.5rem;
     border-top: 1px solid var(--gray-200);
+    background: white;
+    box-sizing: border-box;
 }
 
 .nav-dots {
