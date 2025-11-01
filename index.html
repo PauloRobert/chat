@@ -61,7 +61,10 @@
       max-width: 390px;
       margin: 0 auto;
       background: white;
-      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden; /* mantém o formato do celular */
+      display: flex;
+      flex-direction: column;
     }
 
     .header {
